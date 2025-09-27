@@ -17,11 +17,9 @@ install:
   - chmod +x gradlew
 
 build_script:
+  - chmod +x gradlew
   # Запускаем автотесты
   # Для проектов на базе Selenide необходимо добавить параметр для запуска браузера
   # в headless режиме -Dselenide.headless=true, параметр --info должен остаться
   - ./gradlew test --info
 
-artifacts:
-  - path: build/reports/tests/test
-    name: TestReports
